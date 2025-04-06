@@ -55,7 +55,7 @@ export const Header = () => {
 			<div
 				className={`${
 					isMenuOpen ? "block" : "hidden"
-				} absolute top-16 left-0 w-full bg-gray-100 text-black p-4 md:hidden`}
+				} absolute top-16 left-0 w-full bg-gray-100 text-black p-4 md:hidden z-50`}
 			>
 				<ul className="flex flex-col space-y-4">
 					<li>
