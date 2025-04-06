@@ -5,7 +5,7 @@ export default function Contactos() {
 		<>
 			<Header />
 			<section className="bg-rgb(228, 228, 228) text-black py-8 mt-10 w-full">
-				<div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-20">
+				<div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-6 gap-20">
 					{/* Morada e Mapa */}
 					<section className="md:w-1/2 text-center md:text-left">
 						<h3 className="text-lg font-semibold">Localização</h3>
@@ -14,8 +14,8 @@ export default function Contactos() {
 						<div className="mt-4">
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.115563956358!2d-8.299370623996326!3d41.44888339217858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24efef74c9989d%3A0xff43f08289c377f7!2sTravessa%20Ferreira%20de%20Castro%2C%20Guimar%C3%A3es!5e1!3m2!1spt-PT!2spt!4v1743607442759!5m2!1spt-PT!2spt"
-								width="600"
-								height="450"
+								width="100%"
+								height="300"
 								style={{ border: "0" }}
 								allowFullScreen
 								loading="lazy"
@@ -60,8 +60,8 @@ export default function Contactos() {
 
 						{/* Redes Sociais */}
 						<div className="mt-16">
-							<h3> Pode também encontrar-nos: </h3>
-							<ul className="flex space-x-4">
+							<h3 className="mb-2">Pode também encontrar-nos:</h3>
+							<ul className="flex justify-center md:justify-start space-x-4">
 								<li>
 									<a
 										href="https://www.instagram.com/claudialemosbeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -105,3 +105,4 @@ export default function Contactos() {
 		</>
 	);
 }
+
