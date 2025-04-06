@@ -23,7 +23,7 @@ export default function Home() {
 					/>
 					{/* Logo sobreposto */}
 					<Image
-						src="/logoo.png"
+						src="/logo.png"
 						alt="Logo Claudia Lemos"
 						width={300}
 						height={500}
