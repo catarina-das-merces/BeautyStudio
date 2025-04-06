@@ -1,103 +1,158 @@
+import { Button } from "@/components/Button";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	return (
+		<>
+			<Header />
+			<section className="relative w-full h-[600px]">
+				{/* Background */}
+				<div className="absolute inset-0 bg-[url('/bg.jpg')] bg-cover bg-center opacity-60"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+				{/* Imagem sobreposta */}
+				<div className="relative flex justify-center w-max-700">
+					<Image
+						src="/cover.jpeg"
+						alt="Claudia Lemos"
+						width={450}
+						height={350}
+						className="mt-20 rounded-lg shadow-lg"
+					/>
+					{/* Logo sobreposto */}
+					<Image
+						src="/logoo.png"
+						alt="Logo Claudia Lemos"
+						width={300}
+						height={500}
+						className="absolute top-7"
+					/>
+				</div>
+			</section>
+
+			<section className="flex flex-col items-center justify-center text-center min-h-[500px] w-full">
+				<h2 className="font-[playfair] text-2l font-extralight mt-30">
+					MAKEUP | BEAUTY{" "}
+				</h2>
+				<h1 className="font-[baskerville] mt-4 text-5xl">
+					Comunicadora que se encontrou na beleza
+				</h1>
+				<p className="text-lg text-black max-w-3xl mt-4">
+					Com mais de 7 anos de experiência no setor da cosmética, desenvolvi um
+					olhar apurado para realçar a individualidade de cada cliente. Para
+					além de maquilhadora profissional (MUA), sou especialista em lifting
+					de pestanas (Lash Tech) e Brow Lamination (Brow Designer),
+					proporcionando assim um serviço completo e diversificado para melhor
+					realçar a sua beleza natural. O meu lema como profissional?
+					Transformar beleza em arte!
+				</p>
+			</section>
+
+			<section className="flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-12 bg-white pb-7">
+				{/* Lado Esquerdo: Texto */}
+				<div className="md:w-1/2 text-left md:text-right max-w-md">
+					<p className="text-3xl font-[Playfair Display] italic leading-snug text-black">
+						Descubra o charme e a vivacidade dos serviços de beleza existentes,
+						onde cada visita é uma nova experiência para explorar tratamentos
+						incríveis e inovadores. Deixe-se envolver pelos serviços
+						cuidadosamente selecionados e sinta a magia de encontrar o serviço
+						perfeito para si que realçará a sua beleza única.
+					</p>
+				</div>
+
+				{/* Lado Direito: Imagens Sobrepostas */}
+				<div className="md:w-1/2 flex justify-center relative mt-6 md:mt-0">
+					{/* Imagem de fundo (Computer) */}
+					<div className="relative">
+						<Image
+							src="/computer.jpeg"
+							alt="Imagem Exemplo"
+							width={400}
+							height={300}
+							className="rounded-lg shadow-lg border-4 border-white"
+						/>
+						{/* Borda no canto superior direito */}
+						<div className="absolute -top-4 -right-4 w-12 h-12 border-t-4 border-r-4 border-black"></div>
+					</div>
+
+					{/* Imagem da frente (Phone) */}
+					<div className="absolute bottom-0 right-0 translate-x-10 translate-y-10 z-10">
+						<Image
+							src="/phone.jpeg"
+							alt="Imagem secção about"
+							width={300}
+							height={200}
+							className="rounded-lg shadow-xl border-4 border-white"
+						/>
+						{/* Borda no canto inferior esquerdo */}
+						<div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-4 border-l-4 border-black"></div>
+					</div>
+				</div>
+			</section>
+
+			<section className="px-6 md:px-20 py-12 mt-15">
+				{/* Título da Secção */}
+				<div className="text-center mb-10">
+					<h3 className="text-3xl font-semibold">Serviços</h3>
+				</div>
+
+				{/* Grid de Serviços */}
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+					{/* Serviço 1 - Brow Lamination */}
+					<div className="flex flex-col items-center text-center">
+						<Image
+							src="/brows.jpeg"
+							alt="Brow Lamination"
+							width={300}
+							height={200}
+							className="rounded-lg shadow-lg"
+						/>
+						<p className="mt-4 font-semibold">Brow Lamination - 30€</p>
+						<p className="mt-2 text-gray-700">
+							Se deseja sobrancelhas mais volumosas, definidas e alinhadas, este
+							procedimento é perfeito para você.
+						</p>
+						<Button />
+					</div>
+
+					{/* Serviço 2 - Maquilhagem */}
+					<div className="flex flex-col items-center text-center">
+						<Image
+							src="/makeup.jpg"
+							alt="Maquilhagem"
+							width={300}
+							height={200}
+							className="rounded-lg shadow-lg"
+						/>
+						<p className="mt-4 font-semibold">Maquilhagem - a partir de 30€</p>
+						<p className="mt-2 text-gray-700">
+							Seja para um evento especial ou para o dia a dia, a maquilhagem é
+							adaptada às suas preferências.
+						</p>
+						<Button />
+					</div>
+
+					{/* Serviço 3 - Lash Lifting */}
+					<div className="flex flex-col items-center text-center">
+						<Image
+							src="/lashes.jpeg"
+							alt="Lash Lifting"
+							width={300}
+							height={200}
+							className="rounded-lg shadow-lg"
+						/>
+						<p className="mt-4 font-semibold">Lash Lifting - 30€</p>
+						<p className="mt-2 text-gray-700">
+							Realce o seu olhar com um tratamento que curva e define as suas
+							pestanas naturalmente.
+						</p>
+						<Button />
+					</div>
+				</div>
+			</section>
+			<Footer />
+		</>
+	);
 }
