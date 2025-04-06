@@ -136,7 +136,7 @@ export default function Marcacoes() {
 									date: e.target.value,
 								})
 							}
-							// required
+							required
 						/>
 						<input
 							type="time"
