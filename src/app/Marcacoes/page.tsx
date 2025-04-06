@@ -75,7 +75,7 @@ export default function Marcacoes() {
 				</div>
 			</section> */}
 
-			<section>
+			<section className="px-4 py-10 sm:px-6 md:px-8">
 				<div className="mt-16 text-black">
 					<h2 className="text-4xl font-light text-center">
 						Faça o seu agendamento!
