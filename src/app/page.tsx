@@ -120,7 +120,7 @@ export default function Home() {
 					{/* Serviço 2 - Maquilhagem */}
 					<div className="flex flex-col items-center text-center">
 						<Image
-							src="/makeup.jpg"
+							src="/makeup.JPG"
 							alt="Maquilhagem"
 							width={300}
 							height={200}
